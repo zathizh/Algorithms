@@ -37,7 +37,6 @@ Node *newStackNode (int data){
         fprintf(stderr, "Error : Stack is Empty\n");
         EXIT_FAILURE;;
     }
-    
     newNode->data = data;
     return newNode;
 }
@@ -54,13 +53,11 @@ int pop(Stack *Stk){
         fprintf(stderr, "Error : Stack is Empty\n");
         EXIT_FAILURE;
     }
-    else{
-        int value  = Stk->top->data;
-        Node *temp = Stk->top;
-        Stk->top = Stk->top->next;
-        free(temp);
-        return value;
-    }
+    int value  = Stk->top->data;
+    Node *temp = Stk->top;
+    Stk->top = Stk->top->next;
+    free(temp);
+    return value;
 }
 
 int peek(Stack *Stk){
@@ -68,10 +65,9 @@ int peek(Stack *Stk){
         fprintf(stderr, "Error : Stack is Empty\n");
         EXIT_FAILURE;
     }
-    else {
-        int value = Stk->top->data;
-        return value;
-    }
+    
+    int value = Stk->top->data;
+    return value;
 }
 
 void delete (Stack *Stk){
