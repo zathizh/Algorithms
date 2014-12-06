@@ -70,3 +70,14 @@ int peek(Queue *q){
     value = q->head->data;
     return value;
 }
+
+int length(Queue *q){
+    int count = 0;
+    Node *temp = q->head;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+    free(temp);
+    return count;
+}
