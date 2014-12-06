@@ -34,8 +34,8 @@ bool isEmpty(Stack *S){
 Node *newStackNode (int data){
     Node *newNode = (Node *)malloc(sizeof(Node));
     if (!newNode) {
-        puts("Memory Allocation Failure");
-        EXIT_FAILURE;
+        fprintf(stderr, "Error : Stack is Empty\n");
+        EXIT_FAILURE;;
     }
     
     newNode->data = data;
@@ -52,7 +52,7 @@ void push(Stack *Stk, int data){
 int pop(Stack *Stk){
     if (isEmpty(Stk)){
         fprintf(stderr, "Error : Stack is Empty\n");
-        exit(1);
+        EXIT_FAILURE;
     }
     else{
         int value  = Stk->top->data;
@@ -66,7 +66,7 @@ int pop(Stack *Stk){
 int peek(Stack *Stk){
     if (isEmpty(stk)){
         fprintf(stderr, "Error : Stack is Empty\n");
-        exit(1);
+        EXIT_FAILURE;
     }
     else {
         int value = Stk->top->data;
