@@ -35,7 +35,7 @@ Node *newStackNode (int data){
     Node *newNode = (Node *)malloc(sizeof(Node));
     if (!newNode) {
         fprintf(stderr, "Error : Stack is Empty\n");
-        EXIT_FAILURE;;
+        exit(1);
     }
     newNode->data = data;
     return newNode;
@@ -51,7 +51,7 @@ void push(Stack *Stk, int data){
 int pop(Stack *Stk){
     if (isEmpty(Stk)){
         fprintf(stderr, "Error : Stack is Empty\n");
-        EXIT_FAILURE;
+        exit(1);
     }
     int value  = Stk->top->data;
     Node *temp = Stk->top;
@@ -63,7 +63,7 @@ int pop(Stack *Stk){
 int peek(Stack *Stk){
     if (isEmpty(stk)){
         fprintf(stderr, "Error : Stack is Empty\n");
-        EXIT_FAILURE;
+        exit(1);
     }
     
     int value = Stk->top->data;
