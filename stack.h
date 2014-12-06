@@ -51,7 +51,8 @@ void push(Stack *Stk, int data){
 
 int pop(Stack *Stk){
     if (isEmpty(Stk)){
-        puts("Stack is Empty");
+        fprintf(stderr, "Error : Stack is Empty\n");
+        exit(1);
     }
     else{
         int value  = Stk->top->data;
@@ -64,7 +65,8 @@ int pop(Stack *Stk){
 
 int peek(Stack *Stk){
     if (isEmpty(stk)){
-        puts("Stack is Empty")
+        fprintf(stderr, "Error : Stack is Empty\n");
+        exit(1);
     }
     else {
         int value = Stk->top->data;
