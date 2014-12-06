@@ -66,6 +66,9 @@ int pop(Stack *Stk){
 }
 
 int peek(Stack *Stk){
+    if (isEmpty(stk)){
+        puts("Stack is Empty")
+    }
     int value = Stk->top->data;
     return value;
 }
