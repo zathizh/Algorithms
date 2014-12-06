@@ -53,19 +53,23 @@ int pop(Stack *Stk){
     if (isEmpty(Stk)){
         puts("Stack is Empty");
     }
-    int value  = Stk->top->data;
-    Node *temp = Stk->top;
-    Stk->top = Stk->top->next;
-    free(temp);
-    return value;
+    else{
+        int value  = Stk->top->data;
+        Node *temp = Stk->top;
+        Stk->top = Stk->top->next;
+        free(temp);
+        return value;
+    }
 }
 
 int peek(Stack *Stk){
     if (isEmpty(stk)){
         puts("Stack is Empty")
     }
-    int value = Stk->top->data;
-    return value;
+    else {
+        int value = Stk->top->data;
+        return value;
+    }
 }
 
 void delete (Stack *Stk){
