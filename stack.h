@@ -9,11 +9,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#ifndef Data_Structures_stack_h
-#define Data_Structures_stack_h
-
-#endif
-
 typedef struct stackNode{
     int data;
     struct stackNode *next;
