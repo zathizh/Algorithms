@@ -1,6 +1,6 @@
 //
 //  stack.h
-//  This is the header file of sathish's stack implementation.
+//  This is the header file of sathish's Stack implementation.
 //  Created by Sathish H Bowatta on 12/6/14.
 //  Copyright (c) 2014 Sathish H Bowatta. All rights reserved.
 //
