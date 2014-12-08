@@ -1,6 +1,6 @@
 //
 //  Graph.h
-//  This is the header file of sathish's Linked List implementation.
+//  This is the header file of sathish's Graph implementation.
 //  Created by Sathish H Bowatta on 12/7/14.
 //  Copyright (c) 2014 Sathish H Bowatta. All rights reserved.
 //
