@@ -73,7 +73,7 @@ int searchInLinkedList(LinkedList *lnkdlst, int searchValue){
         index++;
     }
     
-    fprintf(stderr, "Error : Value is not in the List.\n")
+    fprintf(stderr, "Error : Value is not in the List.\n");
     return -1;
 }
 
