@@ -72,21 +72,27 @@ int searchInLinkedList(LinkedList *lnkdlst, int searchValue){
         temp = temp->next;
         index++;
     }
-    
-    fprintf(stderr, "Error : Value is not in the List.\n");
     return -1;
 }
 
 void deleteFromLinkedList(LinkedList *lnkdlst, int value){
     int index = searchInLinkedList(lnkdlst, value);
-    LinkedListNode *temp = lnkdlst->head;
-    int i;
-    for(i = 0; i < index ; i++ ){
-        temp = temp->next;
+    if (index != -1){
+        LinkedListNode *temp = lnkdlst->head;
+        if (index == 0){
+            temp->next = NULL;
+            temp->prev = NULL;
+        }
+        else {
+            int i;
+            for(i = 0; i < index ; i++ ){
+                temp = temp->next;
+            }
+            temp->prev->next = temp->next;
+            temp->next->prev = temp->prev;
+        }    
+        free(temp);
     }
-    temp->prev->next = temp->next;
-    temp->next->prev = temp->prev;
-    free(temp);
 }
 
 void deleteIndexFromLinkedList(LinkedList *lnkdlst, int index){
